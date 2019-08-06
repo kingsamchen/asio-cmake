@@ -1,6 +1,6 @@
 # ASIO CMake
 
-ASIO-CMake provides handy cmake pacakage wrapper for using asio.
+ASIO-CMake provides handy cmake pacakage wrapper for using ASIO.
 
 ## Quick Start
 
@@ -25,7 +25,7 @@ target_link_libraries(proj-name
 )
 ```
 
-NOTE: `FetchContent_MakeAvailable()` is usable since CMake 3.14; but you can use other population commands for lower versions.
+NOTE: `FetchContent_MakeAvailable()` is available since CMake 3.14; but you can use other population commands in lower versions.
 
 ## Motivation
 
