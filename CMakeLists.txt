@@ -25,8 +25,14 @@ FetchContent_GetProperties(asio)
 
 if(NOT asio_POPULATED)
   message(STATUS "Fetching asio ${ASIO_CMAKE_ASIO_TAG}")
+
+  if(EXISTS "${ASIO_CMAKE_ASIO_DEP_DIR}/asio")
+    set(FETCHCONTENT_SOURCE_DIR_ASIO ${ASIO_CMAKE_ASIO_DEP_DIR})
+    message(STATUS "asio ${ASIO_CMAKE_ASIO_TAG} source found at ${ASIO_CMAKE_ASIO_DEP_DIR}; skip fetching.")
+  endif()
+
   FetchContent_Populate(asio)
-  message(STATUS "Fetching asio ${ASIO_CMAKE_ASIO_TAG} done; src @ ${asio_SOURCE_DIR}")
+  message(STATUS "Populating asio ${ASIO_CMAKE_ASIO_TAG} done; src at ${asio_SOURCE_DIR}")
 endif()
 
 add_library(asio INTERFACE)
