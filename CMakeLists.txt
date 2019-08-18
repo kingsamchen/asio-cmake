@@ -79,6 +79,8 @@ elseif(WIN32)
   message(STATUS "Set _WIN32_WINNET=${_WIN32_WINNT}")
 
   target_compile_definitions(asio
-    INTERFACE _WIN32_WINNT=${_WIN32_WINNT}
+    INTERFACE
+      _WIN32_WINNT=${_WIN32_WINNT}
+      WIN32_LEAN_AND_MEAN
   )
 endif()
