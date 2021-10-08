@@ -2,6 +2,14 @@
 
 ASIO-CMake provides handy cmake pacakage wrapper for using ASIO.
 
+## ** Try CPM.cmake Instead **
+
+This repo is no longer maintained, please try [CPM.cmake](https://github.com/cpm-cmake/CPM.cmake) instead.
+
+It is a general solution to managing dependencies in a light way in.
+
+See [example](https://github.com/cpm-cmake/CPM.cmake/blob/master/examples/asio-standalone/CMakeLists.txt) for how to integrate.
+
 ## Quick Start
 
 We use CMake module [FetchContent](https://cmake.org/cmake/help/latest/module/FetchContent.html) to enable dependency populating, thus CMake v3.11 at minimum is required.
